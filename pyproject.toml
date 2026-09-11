@@ -1,0 +1,8 @@
+[project]
+name = "photocull"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "hidapi>=0.15.0",
+    "pillow>=12.3.0",
+]
