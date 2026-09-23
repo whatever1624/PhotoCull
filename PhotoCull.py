@@ -6,8 +6,8 @@ import decodeDS4
 from PIL import ExifTags, Image, ImageOps, ImageTk
 
 ### File and Folder Settings ###
-startPhotoName: str = ""
-photoFolder: str = '/Users/willow/Pictures/Olympus E-M1 III/101OLYMP'
+startPhotoName: str = ".JPG"
+photoFolder: str = '/Users/willow/Pictures/Olympus E-M1 III/0 - Backup for SD Card Culling'
 photoFileExts: list[str] = ['.jpg', '.png', '.orf', '.raf']
 deleteFolderName: str = "PHOTOCULL DELETE"
 # TODO: Sort options (name, EXIF time)
@@ -17,7 +17,7 @@ ds4VendorID: int = 0x054c
 ds4ProductID: int = 0x09cc
 rZoomMax: float = 2
 zoomSpeed: float = 1
-panSpeed: float = 1000
+panSpeed: float = 2000
 rDeadzone: float = 0.05
 
 ### GUI Settings ###
@@ -28,9 +28,9 @@ backgroundColour: str = "#000"
 BShareTextBuffers = False
 
 ### Performance Settings ###
-fpsLimit: float = 60
-rDownsample: int = 1        # Factor to downsample the image to improve performance (1 for no downsampling)
-BFastResample: bool = True  # Whether to use fast but lower quality (HAMMING) resampling over max quality (LANCZOS)
+fpsLimit: float = 30
+rDownsample: int = 2        # Factor to downsample the image to improve performance (1 for no downsampling)
+BFastResample: bool = False  # Whether to use fast but lower quality (HAMMING) resampling over max quality (LANCZOS)
 
 def wrap(x, lowerBound, upperBound):
     """Wraps value between the lower (inclusive) and upper (exclusive) bounds"""
